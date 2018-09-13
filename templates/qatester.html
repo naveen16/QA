@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>QA Tester</title>
+<script 
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="qa.js">
+</script>
+<body>
+
+<h3>Create QA Session</h3>
+(Please make a note of the session ID to be used in below services)
+<form id="f1" method="POST" onsubmit="processCreateSession()">
+Enter Host Name: <input type="text" name="hostname"><br />
+Enter Start Time: <input type="text" name="starttime"><br />
+Enter End Time: <input type="text" name="endtime"><br />
+<input type="submit" value="Submit">
+</form>
+
+<h3>Create Question </h3>
+
+<form id="f2" method="POST" onsubmit="processCreateQuestion()">
+Enter Session ID: <input type="text" name="sessionId"><br />
+Enter Question: <input type="text" name="question"><br />
+Enter Asked By: <input type="text" name="asked_by"><br />
+<input type="submit" value="Submit">
+</form>
+
+<h3>Create Answer </h3>
+(Question numbers start at 1 for each session)
+<form id="f3" method="POST" onsubmit="processCreateAnswer()">
+Enter Session ID: <input type="text" name="sessionId"><br />
+Enter Question ID: <input type="text" name="questionId"><br />
+Enter Answer: <input type="text" name="answer"><br />
+Enter Answer URL: <input type="text" name="answer_url"><br />
+Enter Answered By: <input type="text" name="answered_by"><br />
+<input type="submit" value="Submit">
+</form>
+
+<h3>Get Session </h3>
+
+<form id="f4" method="POST" onsubmit="processGetSession()">
+Enter Session ID: <input type="text" name="sessionId"><br />
+<input type="submit" value="Submit">
+</form>
+
+<h3>Get Questions </h3>
+
+<form id="f5" method="POST" onsubmit="processGetQuestions()">
+Enter Session ID: <input type="text" name="sessionId"><br />
+Enter Filter:
+<select name=filter>
+  <option value="a">Answered</option>
+  <option value="u">Unanswered</option>
+  <option value="">All</option>
+</select>
+<input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
