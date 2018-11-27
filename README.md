@@ -1,3 +1,6 @@
+This Web application creates RESTful web services for a Question/Answer session. The technologies used are HTML/Javascript, Python, Flask,
+and SQLite.
+
 ## Step 0
 Clone the repository on your local machine
 ```
