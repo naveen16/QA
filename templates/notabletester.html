@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>Notable Tester</title>
+<script src="jquery.min.js"></script>
+<script src="notable.js">
+</script>
+<body>
+
+<h3>Create Appointment</h3>
+<form id="f1" method="POST" onsubmit="processCreateAppointment()">
+Patient First Name: <input type="text" name="pfname"><br />
+Patient Last Name: <input type="text" name="plname"><br />
+Date: <input type="text" name="date"> (MM-DD-YYYY)<br />
+Time: <input type="text" name="time"> (HH:MM must be interval of 15 mins, HH in military time)<br />
+Appointment Type(New Patient/Follow-Up):
+<select name="atype">
+  <option value="New Patient">New Patient</option>
+  <option value="Follow-Up">Follow-Up</option>
+</select><br />
+Physician ID: <input type="number" name="pid"><br />
+<input type="submit" value="Submit">
+</form>
+
+<h3>Get PHYSICIANS </h3>
+
+<button id="b1" onclick="processGetPhysicians()">Get Doctors</button>
+
+</body>
+</html>
